@@ -12,25 +12,31 @@ https://www.tooplate.com/view/2157-poppy-studio
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --vanilla: #FFF9F0;
-  --pastel-pink: #FFD1DC;
-  --tape: rgba(135, 206, 235, 0.4);
-  --tape-hi: rgba(135, 206, 235, 0.55);
-  --tape-lo: rgba(135, 206, 235, 0.2);
-  --ink: #3A3226;
-  --ink-light: #7A7060;
-  --peach: #FFDAB9;
-  --lavender: #E6D8F0;
-  --mint: #D4F0E7;
-  --butter: #FFF5C3;
-  --coral-light: #FFE0D6;
+  --vanilla: #fff0f6;
+  --pastel-pink: #ffddeb;
+  --tape: rgba(200, 255, 220, 0.4);
+  --tape-hi: rgba(200, 255, 220, 0.55);
+  --tape-lo: rgba(200, 255, 220, 0.2);
+  --ink: #78b89a;
+  --ink-light: #e89db8;
+  --peach: #ffd6e7;
+  --lavender: #fce4ec;
+  --mint: #ddf7ea;
+  --butter: #f7fff9;
+  --coral-light: #cfefdd;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: var(--vanilla);
-  background-image: radial-gradient(circle, #D4C9B8 0.8px, transparent 0.8px);
+  background: linear-gradient(
+    135deg
+    #fff0f6 0%
+    #FFE4EC 50%
+    #E6F8EE 100%
+  );
+
+  background-image: radial-gradient(circle, rgba(255, 192, 203, 0.25) 1px, transparent 1px);
   background-size: 28px 28px;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
   color: var(--ink);
@@ -94,7 +100,7 @@ body {
   letter-spacing: 2px;
   line-height: 1.1;
 }
-.site-title span { color: #E8889A; }
+.site-title span { color: #ff8fb1; }
 
 .site-tagline {
   font-family: 'Special Elite', monospace;
@@ -144,8 +150,13 @@ body {
 /* ─── NOTE BASE ─── */
 .note {
   position: absolute;
-  background: #fff;
-  border: 2px solid rgba(58, 50, 38, 0.10);
+  background: linear-gradient(
+    135deg,
+    #ffddeb,
+    #ddf7ea
+  );
+
+  border: 2px solid rgba(120, 184, 154, 0.15);
   border-radius: 3px;
   padding: 38px 36px 30px;
   cursor: default;
@@ -206,7 +217,11 @@ body {
 
 .note:hover {
   transform: rotate(0deg) !important;
-  background: #FFE4EC !important;
+  background: linear-gradient(
+    135deg,
+    #FFE4EC,
+    #E6F8EE
+  )!important;
 }
 
 /* ─── TAPE (realistic gradient + torn edges) ─── */
@@ -287,7 +302,7 @@ body {
   font-family: 'Fredoka', sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 4vw, 48px);
-  color: #E8889A;
+  color: #ff8fb1;
   line-height: 1.15;
   margin-bottom: 16px;
   position: relative; z-index: 1;
